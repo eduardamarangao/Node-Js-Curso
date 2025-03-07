@@ -16,7 +16,7 @@ const Sequelize = require("sequelize");
 
   // Rotas
     app.get("/cad", (req, res) => {
-      res.send('<h1>Rota de cadastro de posts</h1>');
+      res.render('formulario');
     })
 
   // Conexão com o banco de dados
