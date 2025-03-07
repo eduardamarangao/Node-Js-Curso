@@ -27,3 +27,5 @@ const Usuario = sequelize.define('usuarios', {
         type: Sequelize.STRING
     }
 })
+
+Usuario.sync({force: true})
