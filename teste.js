@@ -14,9 +14,9 @@ const Postagem = sequelize.define("postagens", {
 });
 
 Postagem.create({
-    titulo: "Um título qualquer",
-    conteudo: "Conteúdo qualquer"
-})
+  titulo: "Um título qualquer",
+  conteudo: "Conteúdo qualquer",
+});
 
 const Usuario = sequelize.define("usuarios", {
   nome: {
@@ -34,8 +34,8 @@ const Usuario = sequelize.define("usuarios", {
 });
 
 Usuario.create({
-    nome: "eduarda",
-    sobrenome: "amorim",
-    idade: 14,
-    email: "blabla@email.com"
-})
+  nome: "eduarda",
+  sobrenome: "amorim",
+  idade: 14,
+  email: "blabla@email.com",
+});
