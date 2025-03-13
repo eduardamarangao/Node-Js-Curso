@@ -3,6 +3,7 @@ const app = express();
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const Post = require("./models/Posts");
+const { ConnectionTimedOutError } = require("sequelize");
 
 
   // Config
@@ -20,7 +21,10 @@ const Post = require("./models/Posts");
     })
 
     app.post('/add', (req, res) => {
-      res.send('Texto: ' + req.body.titulo + ' Conteúdo: ' + req.body.conteudo);
+      Post.create({
+        titulo: req.body.titulo,
+        conteudo: req.body.conteudo
+      })
     })
     
   // Conexão com o banco de dados
