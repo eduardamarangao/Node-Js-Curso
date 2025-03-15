@@ -30,7 +30,7 @@ const { ConnectionTimedOutError } = require("sequelize");
         titulo: req.body.titulo,
         conteudo: req.body.conteudo
       }).then(() =>{
-        res.send("/");  
+        res.redirect("/");  
       }).catch((erro) => {
         res.send("Erro ao criar o post: " + erro);
       })
