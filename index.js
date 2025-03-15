@@ -16,6 +16,11 @@ const { ConnectionTimedOutError } = require("sequelize");
     
 
   // Rotas
+
+    app.ge('./',(req, res) => {
+      res.render('home');
+    })
+
     app.get("/cad", (req, res) => {
       res.render('formulario');
     })
