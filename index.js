@@ -19,6 +19,7 @@ const { ConnectionTimedOutError } = require("sequelize");
 
     app.get('/',(req, res) => {
       Post.findAll().then((posts) => {
+        console.log(posts);
         res.render('home', {posts: posts});
       })
     })
