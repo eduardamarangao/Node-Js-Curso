@@ -40,6 +40,9 @@ Usuario.create({
   email: "blabla@email.com",
 });
 
+//Post.findAll({order: [['id', 'DESC']]}).then((posts) => { //desc é decrescente, asc é crescente
+
+
 /*
 {{#each posts}}
     <small>{{createdAt}}</small> //exibe a hora de criaçao da postagem

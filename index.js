@@ -18,7 +18,7 @@ const { ConnectionTimedOutError } = require("sequelize");
   // Rotas
 
     app.get('/',(req, res) => {
-      Post.findAll().then((posts) => {
+      Post.findAll({order: [['id', 'DESC']]}).then((posts) => {
         console.log(posts);
         res.render('home', {posts: posts});
       })
