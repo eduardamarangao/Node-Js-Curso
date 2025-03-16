@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
-const Post = require("./models/Posts");
+const Post = require("./models/Post");
 const { ConnectionTimedOutError } = require("sequelize");
 
 
@@ -18,6 +18,7 @@ const { ConnectionTimedOutError } = require("sequelize");
   // Rotas
 
     app.get('/',(req, res) => {
+      Post.findAll()
       res.render('home');
     })
 
