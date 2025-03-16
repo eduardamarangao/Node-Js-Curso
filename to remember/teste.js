@@ -39,3 +39,11 @@ Usuario.create({
   idade: 14,
   email: "blabla@email.com",
 });
+
+/*
+{{#each posts}}
+    <h1>{{titulo}}</h1>
+    <p>{{conteudo}}</p>
+    <hr>
+{{/each}} 
+*/ //para cada postagem, ele vai exibir o título e o conteúdo
