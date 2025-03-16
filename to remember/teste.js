@@ -42,6 +42,7 @@ Usuario.create({
 
 /*
 {{#each posts}}
+    <small>{{createdAt}}</small> //exibe a hora de criaçao da postagem
     <h1>{{titulo}}</h1>
     <p>{{conteudo}}</p>
     <hr>
