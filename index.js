@@ -38,6 +38,10 @@ const { ConnectionTimedOutError } = require("sequelize");
         res.send("Erro ao criar o post: " + erro);
       })
     })
+
+    app.get('/deletar/:id', (req, res) => {
+      Post.destroy
+    })
     
   // Conexão com o banco de dados
   app.listen(8081, function () {
