@@ -1,5 +1,39 @@
 <h1>Lista de posts: </h1>
 
+<style>
+    body {
+        background-color: #f8d3f8a8;
+    }
+
+    h1 {
+        color: #000000c2;
+    }
+
+    p {
+        color: #000000c2;
+    }
+
+    
+
+    button {
+        background-color: #ff98ee;
+        color: #000000c2;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #a0da8e;
+        box-shadow: #030000;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+</style>
+
 {{#each posts}}
     <h1>{{titulo}}</h1>
     <p>{{conteudo}}</p>
