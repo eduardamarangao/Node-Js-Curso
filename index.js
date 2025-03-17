@@ -3,7 +3,7 @@ const app = express();
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const Post = require("./models/Post");
-const { ConnectionTimedOutError } = require("sequelize");
+const { ConnectionTimedOutError, where } = require("sequelize");
 
 
   // Config
@@ -40,7 +40,11 @@ const { ConnectionTimedOutError } = require("sequelize");
     })
 
     app.get('/deletar/:id', (req, res) => {
-      Post.destroy
+      Post.destroy({where: {'id': req.params.id}}).then(() => {
+        res.send("Postagem deletada com sucesso");
+      }).catch((erro) => {
+        res.send("Erro ao deletar postagem: " + erro);
+      })  
     })
     
   // Conexão com o banco de dados
