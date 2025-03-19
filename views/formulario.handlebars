@@ -4,7 +4,7 @@
     }
 
     p {
-        color: #000000c2;
+        color: #ffffffc2;
         font-size: 18px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
@@ -13,7 +13,7 @@
     input{
         background-color: #ffffffc2;
         display: block;
-        width: 25%;
+        width: 65%;
         padding: 8px;
         margin-bottom: 10px;
         border: 1.5px solid #000000;
@@ -23,12 +23,13 @@
         margin-right: auto;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 10px 3px 25px #000000;
     }
 
     textarea{
         background-color: #ffffffc2;
         display: block;
-        width: 26%;
+        width: 78%;
         padding: 10px;
         margin-bottom: 10px;
         border: 1.5px solid #000000c2;
@@ -38,17 +39,25 @@
         margin-right: auto;
         margin-left: auto;
         margin-right: auto;
+        box-shadow: 10px 3px 25px #000000;
         
     }
 
-    textarea{
-        background-color: #ffffffc2;
+    #container {
+        background-color: #0000009d;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        width: 30%;
+        margin: 50px auto;
+        text-align: center;
+    
     }
     
     
     button {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: rgb(200, 240, 192);
+        background-color: #ffffffc2;
         color: #000000c2;
         padding: 5px 20px;
         border-radius: 5px;
@@ -56,20 +65,24 @@
         cursor: pointer;
         display: block;
         margin: 0 auto;
+        box-shadow: 1px 1px 18px #110000b0;
 
     }
 
     button:hover {
-        background-color: #;
+        background-color: #494d49;
         
     }
 
 </style>
 
-<form action="/add" method="POST"> <!-- action serve para dizer onde o formulário será enviado -->
+<div id="container">
+    <form action="/add" method="POST"> <!-- action serve para dizer onde o formulário será enviado -->
     <p>Título: </p>
     <input type="text" name="titulo">
     <p>Conteúdo: </p>
     <textarea name="conteudo" id=""></textarea>
     <button type="submit">Cadastrar</button>
 </form>
+</div>
+
