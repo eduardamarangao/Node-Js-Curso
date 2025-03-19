@@ -3,16 +3,42 @@
         background-color: #d1f7bfa8;
     }
 
-    h1 {
-        color: #000000c2;
-    }
-
     p {
         color: #000000c2;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
     }
 
     input{
-        background-color: rgb(200, 240, 192)
+        background-color: rgb(200, 240, 192);
+        display: block;
+        width: 25%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1.5px solid #000000;
+        border-radius: 15px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    textarea{
+        background-color: rgb(200, 240, 192);
+        display: block;
+        width: 26%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1.5px solid #000000;
+        border-radius: 15px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 
     textarea{
@@ -22,16 +48,19 @@
     
     button {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: #a0da8e;
+        background-color: rgb(200, 240, 192);
         color: #000000c2;
-        border: none;
-        padding: 15px 20px;
+        padding: 5px 20px;
         border-radius: 5px;
+        border: 1.5px solid #000000;
         cursor: pointer;
+        display: block;
+        margin: 0 auto;
+
     }
 
     button:hover {
-        background-color: #ff98ee;
+        background-color: rgb(128, 165, 120);
         box-shadow: #030000;
     }
 
@@ -42,5 +71,5 @@
     <input type="text" name="titulo">
     <p>Conteúdo: </p>
     <textarea name="conteudo" id=""></textarea>
-    <button type="submit">Cadastrar postagens</button>
+    <button type="submit">Cadastrar</button>
 </form>

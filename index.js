@@ -41,7 +41,7 @@ const { ConnectionTimedOutError, where } = require("sequelize");
 
     app.get('/deletar/:id', (req, res) => {
       Post.destroy({where: {'id': req.params.id}}).then(() => {
-        res.send("Postagem deletada com sucesso");
+        res.render("postagem");
       }).catch((erro) => {
         res.send("Essa postagem não existe "+ erro);
       })  
