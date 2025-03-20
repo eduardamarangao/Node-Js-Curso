@@ -1,8 +1,14 @@
 <h1>Lista de posts: </h1>
 
+
 <style>
+    h1{
+        text-align: center;
+
+    }
+
     body {
-        background-color: #000000d8;
+        background-color: #302a2fd8;
     }
 
     h1 {
@@ -13,7 +19,16 @@
         color: #ffffffc2;
     }
 
-    
+    #container {
+        background-color: #00000083;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        width: 30%;
+        margin: 50px auto;
+        text-align: center;
+        box-shadow: 10px 5px 30px #000000a1;
+    }
 
     button {
         background-color: #ffffffc2;
@@ -33,11 +48,14 @@
     }
 </style>
 
-{{#each posts}}
+<div id="container">
+    {{#each posts}}
     <h1>{{titulo}}</h1>
     <p>{{conteudo}}</p>
     <a href="/deletar/{{id}}"><button>Deletar</button></a>
     <a href="/cad"><button>Criar Novo Post</button></a>
     <hr>
 {{/each}}
+
+</div>
 
