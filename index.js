@@ -37,13 +37,13 @@ app.post("/add", (req, res) => {
     });
 });
 
-app.get("/deletar/:id", (req, res) => {
-  Post.destroy({ where: { id: req.params.id } }).then(() => {
-      res.render("postagem");
-    }).catch((erro) => {
-      res.send("Essa postagem não existe " + erro);
-    });
-});
+  app.get("/deletar/:id", (req, res) => {
+    Post.destroy({ where: { id: req.params.id } }).then(() => {
+        res.render("postagem");
+      }).catch((erro) => {
+        res.send("Essa postagem não existe " + erro);
+      });
+  });
 
   // Conexão com o banco de dados
   app.listen(8081, function () {
