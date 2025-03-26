@@ -26,16 +26,16 @@ app.get("/cad", (req, res) => {
   res.render("formulario");
 });
 
-app.post("/add", (req, res) => {
-  Post.create({
-    titulo: req.body.titulo,
-    conteudo: req.body.conteudo,
-  }).then(() => {
-      res.redirect("/");
-    }).catch((erro) => {
-      res.send("Erro ao criar o post: " + erro);
-    });
-});
+  app.post("/add", (req, res) => {
+    Post.create({
+      titulo: req.body.titulo,
+      conteudo: req.body.conteudo,
+    }).then(() => {
+        res.redirect("/");
+      }).catch((erro) => {
+        res.send("Erro ao criar o post: " + erro);
+      });
+  });
 
   app.get("/deletar/:id", (req, res) => {
     Post.destroy({ where: { id: req.params.id } }).then(() => {
