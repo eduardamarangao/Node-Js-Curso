@@ -15,16 +15,16 @@ app.use(bodyParser.json());
 
 // Rotas
 
-app.get("/", (req, res) => {
-  Post.findAll({ order: [["id", "DESC"]] }).then((posts) => {
-    console.log(posts);
-    res.render("home", { posts: posts });
+  app.get("/", (req, res) => {
+    Post.findAll({ order: [["id", "DESC"]] }).then((posts) => {
+      console.log(posts);
+      res.render("home", { posts: posts });
+    });
   });
-});
 
-app.get("/cad", (req, res) => {
-  res.render("formulario");
-});
+  app.get("/cad", (req, res) => {
+    res.render("formulario");
+  });
 
   app.post("/add", (req, res) => {
     Post.create({
