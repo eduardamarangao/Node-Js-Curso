@@ -30,26 +30,22 @@ app.post("/add", (req, res) => {
   Post.create({
     titulo: req.body.titulo,
     conteudo: req.body.conteudo,
-  })
-    .then(() => {
+  }).then(() => {
       res.redirect("/");
-    })
-    .catch((erro) => {
+    }).catch((erro) => {
       res.send("Erro ao criar o post: " + erro);
     });
 });
 
 app.get("/deletar/:id", (req, res) => {
-  Post.destroy({ where: { id: req.params.id } })
-    .then(() => {
+  Post.destroy({ where: { id: req.params.id } }).then(() => {
       res.render("postagem");
-    })
-    .catch((erro) => {
+    }).catch((erro) => {
       res.send("Essa postagem não existe " + erro);
     });
 });
 
-// Conexão com o banco de dados
-app.listen(8081, function () {
-  console.log("Servidor rodando na url http://localhost:8081");
-});
+  // Conexão com o banco de dados
+  app.listen(8081, function () {
+    console.log("Servidor rodando na url http://localhost:8081");
+  });
