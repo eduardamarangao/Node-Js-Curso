@@ -53,3 +53,22 @@ Usuario.create({
 */ //para cada postagem, ele vai exibir o título e o conteúdo
 
 //Post.findOne({where: {id: 1}}).then((post) => { //findOne é para encontrar um post específico
+
+//**MongoDb*****
+/*
+const mongoose = require("mongoose");
+
+
+// Configurando o mongoose
+mongoose.Promise = global.Promise;
+mongoose
+  .connect("mongodb://localhost/bancoqualquer", {
+    useMongoClient: true,
+  })
+  .then(() => {
+    console.log("MongoDB conectado...");
+  })
+  .catch((err) => {
+    console.log("Erro ao conectar" + err);
+  });
+  */
