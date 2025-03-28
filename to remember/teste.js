@@ -55,7 +55,7 @@ Usuario.create({
 //Post.findOne({where: {id: 1}}).then((post) => { //findOne é para encontrar um post específico
 
 //**MongoDb*****
-/*
+
 const mongoose = require("mongoose");
 
 
@@ -71,4 +71,3 @@ mongoose
   .catch((err) => {
     console.log("Erro ao conectar" + err);
   });
-  */
