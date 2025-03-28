@@ -51,3 +51,5 @@ Usuario.create({
     <hr>
 {{/each}} 
 */ //para cada postagem, ele vai exibir o título e o conteúdo
+
+//Post.findOne({where: {id: 1}}).then((post) => { //findOne é para encontrar um post específico
