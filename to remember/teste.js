@@ -71,3 +71,10 @@ mongoose
   .catch((err) => {
     console.log("Erro ao conectar" + err);
   });
+
+
+  const UsuariosSchema = mongoose.Schema({
+    nome: {
+      type: String, Number, Date, Object // tipos de dado
+    }
+})
